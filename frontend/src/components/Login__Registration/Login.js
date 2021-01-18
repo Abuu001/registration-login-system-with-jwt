@@ -19,7 +19,7 @@ function Login({setAuth}) {
         e.preventDefault()
         try {
             const body = {email,password,name}
-            const response = await fetch("http://localhost:3002/auth/login",{
+            const response = await fetch("/auth/login",{
                 method :"POST",
                 headers : {"Content-Type" : "application/json"},
                 body  : JSON.stringify(body)
@@ -49,7 +49,7 @@ function Login({setAuth}) {
     }
     return (
     <Fragment>
-        <div class="container login-container">
+        <div className="container login-container">
             <h1>Login</h1>
             <form onSubmit={onSubmitForm} >
                 <input type="email" name="email"  placeholder="email"  className="form-control my-3"  value={email} onChange={e=>onChange(e)} required/>
@@ -61,20 +61,20 @@ function Login({setAuth}) {
             <br></br>
           <p>Not Registered ?   <Link to="/register">Register an account</Link> </p>
             <div  className="socialmedia__Icons">
-               <a href="/register" class=" socialMedia__Icon1 ">
-                    <i class="fab fa-google "> </i> 
+               <a href="/register" className=" socialMedia__Icon1 ">
+                    <i className="fab fa-google "> </i> 
                 </a>
-                <a href="/register" class=" socialMedia__Icon2">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
+                <a href="/register" className=" socialMedia__Icon2">
+                <i className="fab fa-twitter" aria-hidden="true"></i>
                     </a>
-                    <a href="/register" class=" socialMedia__Icon3">
-                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                    <a href="/register" className=" socialMedia__Icon3">
+                    <i className="fab fa-facebook" aria-hidden="true"></i>
                 </a> 
-                <a href="/register" class=" socialMedia__Icon4">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <a href="/register" className=" socialMedia__Icon4">
+                <i className="fab fa-instagram" aria-hidden="true"></i>
                 </a> 
-                <a href="/register" class=" socialMedia__Icon5">
-                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <a href="/register" className=" socialMedia__Icon5">
+                <i className="fab fa-whatsapp" aria-hidden="true"></i>
                 </a> 
             </div>
         </div>
