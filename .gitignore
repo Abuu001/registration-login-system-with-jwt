@@ -1,2 +1,3 @@
-/backend/config/dev.env
-/backend/db.sql
+/config/dev.env
+/db.sql
+/node_modules
