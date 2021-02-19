@@ -9,7 +9,7 @@ function Registration({setAuth}) {
         email : "",
         password : ""
     })
-
+            
     const {email,name,password} =inputs
     const onChange =(e)=>{
         setInputs({...inputs,[e.target.name]  : e.target.value })
@@ -63,7 +63,7 @@ function Registration({setAuth}) {
                     </a>
                     <a href="/register" className=" socialMedia__Icon3">
                     <i className="fab fa-facebook" aria-hidden="true"></i>
-                </a> 
+                </a>  
                 <a href="/register" className=" socialMedia__Icon4">
                 <i className="fab fa-instagram" aria-hidden="true"></i>
                 </a> 
